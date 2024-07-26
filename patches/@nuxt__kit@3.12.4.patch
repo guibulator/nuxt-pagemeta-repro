@@ -1,0 +1,12 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index fb03c5db715b0c3c1df2ba64f538e85cc852347f..dd8f4fd0ca5a4f111308cc70e1f2832507db909e 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -3033,6 +3033,7 @@ async function _generateTypes(nuxt) {
+   for (const path of modulePaths) {
+     const relative2 = relativeWithDot(nuxt.options.buildDir, path);
+     include.add(join(relative2, "runtime"));
++include.add(join(relative2, "dist/runtime"));
+     exclude.add(join(relative2, "runtime/server"));
+   }
+   const isV4 = nuxt.options.future?.compatibilityVersion === 4;
